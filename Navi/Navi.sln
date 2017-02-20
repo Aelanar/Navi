@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navi.CSharp", "Navi.CSharp.csproj", "{1DE8FBD8-62C6-CDFA-6587-0760DE4F270A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navi", "Navi.csproj", "{F8B92148-129E-8A84-943C-84CEF37E2395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1DE8FBD8-62C6-CDFA-6587-0760DE4F270A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DE8FBD8-62C6-CDFA-6587-0760DE4F270A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DE8FBD8-62C6-CDFA-6587-0760DE4F270A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DE8FBD8-62C6-CDFA-6587-0760DE4F270A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B92148-129E-8A84-943C-84CEF37E2395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B92148-129E-8A84-943C-84CEF37E2395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B92148-129E-8A84-943C-84CEF37E2395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B92148-129E-8A84-943C-84CEF37E2395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
