@@ -11,7 +11,8 @@ public class BlocFall : MonoBehaviour {
 
     float detectionRange = 3;
     bool closeEnough = false;
-    public Transform player;
+
+    Transform player;
     float initialY;
 
 	// Use this for initialization
@@ -19,6 +20,7 @@ public class BlocFall : MonoBehaviour {
         initialY = transform.position.y;
         Vector3 position = new Vector3(transform.position.x, 100, transform.position.z);
         this.transform.position = position;
+        player = GameObject.Find("Character").GetComponent<Transform>();
     }
 	
 	// Update is called once per frame
