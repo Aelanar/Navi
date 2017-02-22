@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     KeyCode keyLeft = KeyCode.Q;
     KeyCode keyRight = KeyCode.D;
 
+
     //rigidbody responsable de la physique du joueur
     Rigidbody rb;
 
@@ -33,8 +35,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(keyUp))
         {
-
             rb.velocity = new Vector3(speed, 0.0f, rb.velocity.z);
+
         }
         if (Input.GetKey(keyDown))
         {

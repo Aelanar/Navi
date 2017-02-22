@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
     /// <summary>
@@ -13,13 +14,17 @@ public class Enemy : MonoBehaviour {
     private int pos=0;
     private int maxPos;
     public float speed=1;
+    
+    // Le navMeshAgent s'occupe du pathfinding
+    NavMeshAgent agent;
 
-	// mise en place des positions
-	void Start () {
+    // mise en place des positions
+    void Start () {
+        agent = GetComponent<NavMeshAgent>();
         transformList = this.gameObject.GetComponentInChildren<ListPos>().GetListPos();
         maxPos = transformList.Length;
         positionsList = new Vector3[maxPos];
-        for(int i= 0; i < maxPos;i++)
+        for (int i= 0; i < maxPos;i++)
         {
             positionsList[i] = transformList[i].position;
         }
@@ -28,10 +33,11 @@ public class Enemy : MonoBehaviour {
 
 	// Déplcament vers la position target
 	void Update () {
-        float step = speed * Time.deltaTime;
+        float precision = 1;
         Vector3 target = positionsList[pos];
-        transform.position = Vector3.MoveTowards(transform.position, target, step);
-        if ((transform.position - target).sqrMagnitude < step)
+        agent.destination = target;
+        print((transform.position - target).sqrMagnitude );
+        if ((transform.position - target).sqrMagnitude < precision)
         {
             pos = (pos+1)%maxPos ;
         }
