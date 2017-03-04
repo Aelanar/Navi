@@ -10,17 +10,29 @@ public class CubeMelting : MonoBehaviour, LightInteraction
 
     public float lifeTime;
     GameObject obj;
-
+    Renderer rend;
 
     void Start()
     {
         obj = this.gameObject;
+        rend = this.GetComponent<Renderer>();
     }
+
+
+    void Fade()
+    {
+        Color c = rend.material.color;
+        c.a = c.a*0.99f;
+        rend.material.color = c;
+        }
+    
 
 
     public void Lighted(string color)
     {
+
         lifeTime -= 1;
+        Fade();
         if (lifeTime < 0)
         {
             obj.SetActive(false);
